@@ -1,0 +1,35 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
+    strategy:
+      matrix:
+        otp: [22.1.7]
+        elixir: [1.10.4]
+    env:
+      MIX_ENV: test
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup elixir
+      uses: actions/setup-elixir@v1
+      with:
+        otp-version: ${{matrix.otp}}
+        elixir-version: ${{matrix.elixir}}
+    - name: Install Dependencies
+      run: mix deps.get
+    - name: Compile Strictly
+      run: mix compile --warnings-as-errors
+    - name: Check Formatting
+      run: mix format --check-formatted
+    - name: Check Coding Standard
+      run: mix credo --strict
+    - name: Run Tests
+      run: mix coveralls.github

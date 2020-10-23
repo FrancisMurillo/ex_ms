@@ -1,7 +1,12 @@
 # ExMs
-![BuildStatus](https://github.com/FrancisMurillo/ex_ms/workflows/.github/workflows/elixir.yml/badge.svg)[![Coverage
-Status](https://coveralls.io/repos/github/FrancisMurillo/ex_ms/badge.svg?branch=main)](https://coveralls.io/github/FrancisMurillo/ex_ms?branch=main)[![Hex
-pm](http://img.shields.io/hexpm/v/ex_ms.svg?style=flat)](https://hex.pm/packages/ex_ms)![GitHub](https://img.shields.io/github/license/FrancisMurillo/ex_ms)
+
+[![BuildStatus](https://github.com/FrancisMurillo/ex_ms/workflows/.github/workflows/elixir.yml/badge.svg)](https://github.com/FrancisMurillo/ex_ms/actions)
+[![Coverage Status](https://coveralls.io/repos/github/FrancisMurillo/ex_ms/badge.svg?branch=main)](https://coveralls.io/github/FrancisMurillo/ex_ms?branch=main)
+[![Hex.pm](http://img.shields.io/hexpm/v/ex_ms.svg?style=flat)](https://hex.pm/packages/ex_ms)
+[![Hexdocs.pm](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/ex_ms/)
+[![Hex.pm](http://img.shields.io/hexpm/dt/ex_ms.svg?style=flat)](https://hex.pm/packages/ex_ms)
+[![Hex.pm](http://img.shields.io/hexpm/l/ex_ms.svg?style=flat)](https://hex.pm/packages/ex_ms)
+[![Github.com](https://img.shields.io/github/last-commit/FrancisMurillo/ex_ms.svg)](https://github.com/FrancisMurillo/ex_ms/commits/master)
 
 **A tiny library to parse human readable formats into milliseconds.**
 

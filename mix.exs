@@ -1,6 +1,8 @@
 defmodule ExMs.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/FrancisMurillo/ex_ms"
+
   def project do
     [
       app: :ex_ms,
@@ -17,10 +19,10 @@ defmodule ExMs.MixProject do
       ],
       package: package(),
       name: "Millisecond",
-      source_url: "https://github.com/FrancisMurillo/ex_ms",
-      homepage_url: "https://github.com/FrancisMurillo/ex_ms",
+      homepage_url: @source_url,
       docs: [
-        main: "Millisecond",
+        main: "readme",
+        source_url: @source_url,
         extras: ["README.md"]
       ]
     ]
@@ -32,7 +34,7 @@ defmodule ExMs.MixProject do
       description: "A tiny library to parse human readable formats into milliseconds.",
       maintainers: ["Francis Murillo"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/FrancisMurillo/ex_ms"}
+      links: %{"GitHub" => @source_url}
     ]
   end
 
@@ -43,7 +45,7 @@ defmodule ExMs.MixProject do
   defp deps do
     [
       {:timex, "~> 3.5", optional: true},
-      {:ex_doc, "~> 0.18", only: :dev},
+      {:ex_doc, "~> 0.23", only: :dev},
       {:credo, "~> 1.4.1", only: [:dev, :test], runtime: false},
       {:propcheck, "~> 1.1", only: [:dev, :test]},
       {:excoveralls, "~> 0.10", only: :test}

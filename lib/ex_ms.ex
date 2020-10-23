@@ -334,10 +334,10 @@ defmodule Millisecond do
 
   ## Examples
 
-     iex> ms = Millisecond.parse!("100ms")
-     iex> now = DateTime.utc_now()
-     iex> now |> Millisecond.add(ms) |> DateTime.diff(now, :millisecond)
-     100
+      iex> ms = Millisecond.parse!("100ms")
+      iex> now = DateTime.utc_now()
+      iex> now |> Millisecond.add(ms) |> DateTime.diff(now, :millisecond)
+      100
 
   """
   @spec add(DateTime.t(), t()) :: DateTime.t()
@@ -354,10 +354,10 @@ defmodule Millisecond do
 
   ## Examples
 
-     iex> ms = Millisecond.parse!("100ms")
-     iex> now = DateTime.utc_now()
-     iex> now |> Millisecond.subtract(ms) |> DateTime.diff(now, :millisecond)
-     -100
+      iex> ms = Millisecond.parse!("100ms")
+      iex> now = DateTime.utc_now()
+      iex> now |> Millisecond.subtract(ms) |> DateTime.diff(now, :millisecond)
+      -100
 
   """
   @spec subtract(DateTime.t(), t()) :: DateTime.t()
@@ -378,15 +378,15 @@ defmodule Millisecond do
 
     ## Examples
 
-      iex> {:ok, data} = Millisecond.parse("1h 1s")
-      iex> duration = Millisecond.to_duration(data)
-      iex> Timex.Duration.to_string(duration)
-      "PT1H1S"
+        iex> {:ok, data} = Millisecond.parse("1h 1s")
+        iex> duration = Millisecond.to_duration(data)
+        iex> Timex.Duration.to_string(duration)
+        "PT1H1S"
 
-      iex> {:ok, data} = Millisecond.parse("1d 1h")
-      iex> {:ok, duration} = Timex.Duration.parse("P1DT1H")
-      iex> Millisecond.to_duration(data) == duration
-      true
+        iex> {:ok, data} = Millisecond.parse("1d 1h")
+        iex> {:ok, duration} = Timex.Duration.parse("P1DT1H")
+        iex> Millisecond.to_duration(data) == duration
+        true
 
     """
     @spec to_duration(t()) :: Timex.Duration.t()
